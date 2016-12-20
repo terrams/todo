@@ -1,0 +1,25 @@
+<h1>My Tasks</h1>
+    
+
+<div ng-app="app">
+  {{ 1 + 1 }}  
+
+  <div ng-controller="todosCtrl">
+    <p>Task: {{ firstTask }}</p>
+    <p>Task: {{ secondTask }}</p>  
+    <p>Task: {{ thirdTask }}</p>   
+    <input type="text" ng-model="thirdTask">
+
+    <div ng-repeat="task in tasks">
+      <p><button style="margin-right: 10px" ng-click="deleteTask(task)">Delete Task</button> {{ task }}  </p>
+      <input type="text" ng-model="task">
+    </div>
+
+    <h3>Add a Task</h3>
+    <input ng-model="newTask">
+    <button ng-click="addTask(newTask)">Add Task</button>
+
+
+  </div>
+
+</div>
