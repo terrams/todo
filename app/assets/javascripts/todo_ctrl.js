@@ -10,7 +10,8 @@
     $scope.tasks = ['one', 'two', 'three'];
 
     $scope.addTask = function(inputText) {
-      if ($scope.newTask !== "" && $scope.newTask !== null && typeof $scope.newTask !== "undefined") {
+      // if ($scope.newTask !== "" && $scope.newTask !== null && typeof $scope.newTask !== "undefined") {
+      if (inputText !== "" && inputText !== null && typeof inputText !== "undefined") {
         $scope.tasks.push(inputText);
         $scope.newTask = null;
       }
